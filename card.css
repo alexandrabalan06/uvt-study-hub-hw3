@@ -1,0 +1,55 @@
+.card {
+    background-color: #ffffff;
+    width: 320px;
+    padding: 30px;
+    border-radius: 15px; 
+    border-top: 5px solid darkblue; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    text-align: center;
+}
+
+#avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; 
+    border: 3px solid rgb(165, 178, 235);
+    object-fit: cover;
+}
+
+#name {
+    color: darkblue;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.job {
+    color: gray;
+    font-size: small;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.contactinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.contactinfo p {
+    margin: 0;
+    color: #303030;
+}
+
+.contactinfo a {
+    color: darkblue; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contactinfo a:hover {
+    text-decoration: underline;
+    color: rgb(165, 178, 235);
+}
+

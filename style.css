@@ -1,0 +1,251 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #ffffff; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    background-color: #d3e4ee;
+    margin: 0; 
+}
+
+h1 {
+    text-align: center;
+    color: darkblue;
+    margin: 0; 
+    padding: 20px 0; 
+}
+
+h2, h3 {
+    color: darkblue;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    left: 0;
+    background-color: yellow;
+    padding: 10px;
+}
+
+nav {
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+    margin: 0; 
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    background-color: darkblue;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #106CA5;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: gray;
+    padding: 20px;
+}
+
+.cvlayout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid rgb(165, 178, 235);
+    border-radius: 10px;
+}
+
+.main-content-projects h2 {
+    text-align: center;
+    color: darkblue;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 200px; 
+    border: 2px solid darkblue;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgb(181, 237, 248);
+}
+
+.carddif {
+    background-color: darkblue; 
+    color: white;
+    border: 2px solid rgb(203, 165, 9);
+}
+
+.carddif h3 {
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td { 
+    border: 1px solid black;
+    padding: 10px;
+}
+
+th { 
+    background-color: rgb(165, 178, 235); 
+}
+
+tbody tr:nth-child(even) {
+    background-color: #9bf7ff;
+}
+
+.rightpic {
+    float: right;
+    width: 30%; 
+    margin-left: 15px; 
+}
+
+@media (max-width: 768px) {
+    .cvlayout {
+        grid-template-columns: 1fr; 
+    }
+}
+
+fieldset {
+    border: 2px solid darkblue;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f7fbfc;
+}
+
+legend {
+    background-color: darkblue;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: darkblue;
+    margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus, 
+.form-group select:focus {
+    outline: 3px solid rgb(203, 165, 9);
+    border-color: darkblue;
+}
+
+.error-msg {
+    color: #b30000;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    font-weight: bold;
+    min-height: 20px; 
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-submit, .btn-reset {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btn-submit {
+    background-color: darkblue;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #106CA5;
+}
+
+.btn-reset {
+    background-color: #ccc;
+    color: black;
+}
+
+.btn-reset:hover {
+    background-color: #999;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+caption {
+    font-weight: bold;
+    color: darkblue;
+    margin-bottom: 10px;
+    text-align: left;
+}

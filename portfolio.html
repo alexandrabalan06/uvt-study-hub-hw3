@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <h1>UVT Peer Tutoring Hub</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="data.html">Schedule</a></li>
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="chatbot.html">Chatbot</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html" id="diffbutton">Join Us</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content" style="padding: 20px; max-width: 1000px; margin: 0 auto;">
+        <section class="profil" style="margin-bottom: 40px;">
+            <h2>Add a Personal Project</h2>
+            <p>Use the form below to showcase a project you've worked on. It will appear in the table.</p>
+            
+            <form id="project-form" novalidate style="width: 100%; max-width: 600px;">
+                <fieldset>
+                    <legend>Project Details</legend>
+                    
+                    <div class="form-group">
+                        <label for="pname">Project Name:</label>
+                        <input type="text" id="pname" name="pname" aria-describedby="pname-error">
+                        <span id="pname-error" class="error-msg" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pdesc">Description:</label>
+                        <textarea id="pdesc" name="pdesc" rows="3" aria-describedby="pdesc-error"></textarea>
+                        <span id="pdesc-error" class="error-msg" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="purl">Project URL (GitHub/Live):</label>
+                        <input type="url" id="purl" name="purl" aria-describedby="purl-error" placeholder="https://...">
+                        <span id="purl-error" class="error-msg" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ptech">Main Technology:</label>
+                        <select id="ptech" name="ptech" aria-describedby="ptech-error">
+                            <option value="">-- Choose Technology --</option>
+                            <option value="HTML & CSS">HTML & CSS</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="React">React</option>
+                            <option value="Python">Python</option>
+                        </select>
+                        <span id="ptech-error" class="error-msg" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pdate">Completion Date:</label>
+                        <input type="date" id="pdate" name="pdate" aria-describedby="pdate-error">
+                        <span id="pdate-error" class="error-msg" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit">Add Project</button>
+                        <button type="reset" class="btn-reset">Reset Form</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <section>
+            <h2>Submitted Projects</h2>
+            <div class="table-responsive">
+                <table id="projects-table">
+                    <caption>List of student submitted portfolio projects</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">Technology</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 UVT Study Group Hub</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
