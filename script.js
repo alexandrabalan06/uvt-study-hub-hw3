@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('project-form');
     const tableBody = document.getElementById('table-body');
+
     form.addEventListener('submit', function(event) {
         event.preventDefault(); 
         let isValid = true;
+
         const pname = document.getElementById('pname');
         const pdesc = document.getElementById('pdesc');
         const purl = document.getElementById('purl');
+        const pimage = document.getElementById('pimage');
         const ptech = document.getElementById('ptech');
         const pdate = document.getElementById('pdate');
 
@@ -35,12 +38,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const urlPattern = /^(https?:\/\/)/i;
+        
         if (purl.value.trim() === '') {
             setError(purl, 'URL is required.');
         } else if (!urlPattern.test(purl.value.trim())) {
             setError(purl, 'Please enter a valid URL starting with http:// or https://');
         } else {
             setError(purl, null);
+        }
+
+        if (pimage.value.trim() === '') {
+            setError(pimage, 'Image URL is required.');
+        } else if (!urlPattern.test(pimage.value.trim())) {
+            setError(pimage, 'Please enter a valid image URL.');
+        } else {
+            setError(pimage, null);
         }
 
         if (ptech.value === '') {
@@ -72,6 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
             link.target = '_blank';
             tdUrl.appendChild(link);
 
+            const tdImg = document.createElement('td');
+            const img = document.createElement('img');
+            img.src = pimage.value.trim();
+            img.alt = pname.value.trim() + " project thumbnail";
+            img.style.width = "80px";
+            img.style.borderRadius = "4px";
+            img.loading = "lazy";
+            tdImg.appendChild(img);
+
             const tdTech = document.createElement('td');
             tdTech.textContent = ptech.value;
 
@@ -81,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tr.appendChild(tdName);
             tr.appendChild(tdDesc);
             tr.appendChild(tdUrl);
+            tr.appendChild(tdImg);
             tr.appendChild(tdTech);
             tr.appendChild(tdDate);
 
