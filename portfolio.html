@@ -53,6 +53,12 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="pimage">Image URL (Thumbnail):</label>
+                        <input type="url" id="pimage" name="pimage" aria-describedby="pimage-error" placeholder="https://.../image.jpg">
+                        <span id="pimage-error" class="error-msg" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
                         <label for="ptech">Main Technology:</label>
                         <select id="ptech" name="ptech" aria-describedby="ptech-error">
                             <option value="">-- Choose Technology --</option>
@@ -88,6 +94,7 @@
                             <th scope="col">Name</th>
                             <th scope="col">Description</th>
                             <th scope="col">URL</th>
+                            <th scope="col">Thumbnail</th>
                             <th scope="col">Technology</th>
                             <th scope="col">Date</th>
                         </tr>
